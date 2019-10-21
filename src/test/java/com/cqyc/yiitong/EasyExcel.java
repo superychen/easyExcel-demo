@@ -3,6 +3,7 @@ package com.cqyc.yiitong;
 import com.alibaba.excel.metadata.Sheet;
 import com.cqyc.yiitong.domain.TableHeaderExcelProperty;
 import com.cqyc.yiitong.util.ExcelUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,8 +18,8 @@ import java.util.List;
  * @Author:
  * @Date:
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
 public class EasyExcel {
     private static final String filePath="C:\\Users\\dell\\Desktop\\嘿嘿嘿\\shiroProject\\学生表.xlsx";
 
@@ -135,6 +136,16 @@ public class EasyExcel {
         }
         ExcelUtil.writeWithMultipleSheel(filePath,list1);
 
+    }
+
+    @Test
+    public void fileNamtHouZhui(){
+//        String fileName = "hell";
+//        String s = StringUtils.substringAfterLast(fileName, ".");
+//        System.out.println(s);
+        String filePath="group1/M00/00/00/wKgrDV2b7liAdNk2AA6-Ihmij-I692.gush.tar.gz";
+        String s1 = StringUtils.substringAfterLast(filePath, ".");
+        System.out.println(s1);
     }
 
 
